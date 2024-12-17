@@ -3,12 +3,12 @@ import './MovieApp.css'
 
 export const MovieApp = () => {
   const [search, setSearch] = useState('')
-  const [movieList, setMovieList] = useState([])
+  const [movieList, setMovieList] = useState(null)
 
   const urlBase='https://api.themoviedb.org/3/search/movie'
-  const API_KEY='YOUR_API_KEY'
+  const API_KEY='YOUR-API-KEY'
 
-  const handleInputChange = (target) =>{
+  const handleInputChange = ({target}) =>{
     setSearch(target.value)
   }
 
